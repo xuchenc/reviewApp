@@ -1,0 +1,38 @@
+
+
+<div ng-controller="CreateController as vm" layout="column" ng-cloak ng-submit="vm.addReview()">
+  <h1>This is Create page!</h1>
+  <br/>
+
+  <md-content layout-padding class="autoScroll">
+    <md-input-container>
+      <label>Product Name & Brand</label>
+      <input ng-model="vm.review.name" type="text" placeholder="Product Name/Brand" ng-required="true">
+    </md-input-container>
+    <md-input-container md-no-float>
+      <label>Image</label>
+      <input ng-model="vm.review.image" type="text" placeholder="Image URL" >
+    </md-input-container>
+    <md-input-container>
+      <label>Rating</label>
+      <md-select ng-model="vm.review.rating">
+      <md-option value='5'>5---highest</md-option>
+      <md-option value='4'>4</md-option>
+      <md-option value='3'>3</md-option>
+      <md-option value='2'>2</md-option>
+      <md-option value='1'>1---lowest</md-option>
+     </md-select>
+    </md-input-container>
+    <md-input-container md-no-float>
+      <label>Review Description</label>
+      <textarea ng-model="vm.review.description" type="text" placeholder="type your review here..." ></textarea>
+    </md-input-container>
+  </md-content>
+  <md-button class="md-raised" type="submit">Submit</md-button>
+  <md-button ui-sref="Home" class="md-raised md-warn">Cancel</md-button>
+</div>
+
+
+
+
+</div>

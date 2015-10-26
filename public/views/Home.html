@@ -1,0 +1,35 @@
+<div ng-controller="HomeController as vm">
+	<div ng-repeat="review in vm.reviews" class="well container">
+		<div class='row'>
+			<div class='col-sm-3'>
+				<img ng-src='{{review.image}}' ng-alt='{{review.name}}' class='img-responsive'/>
+				<div class='well container'>
+					<h3><a ui-sref="ReviewDetail({id: review._id})">Product name & brand:{{review.name}}</a></h3>
+					<h3>Product's Rating:{{review.rating}}</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
